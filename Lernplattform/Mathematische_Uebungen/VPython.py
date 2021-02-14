@@ -1,13 +1,13 @@
 from vpython import *
-r=1. #Radius
-h=5. #Höhe
+r=5. #Radius
+h=10. #Höhe
 scene.background=color.green
 scene.center=vector(0,h,0)
 box(pos=vector(0,0,0),size=vector(2*h,r/2,h), color=color.green)
-ball = sphere(radius=r, color=color.yellow)
-ball.pos=vector(0,8*h,0) #Fallhöhe
+ball = sphere(radius=r, color=color.black)
+ball.pos=vector(0,1*h,0) #Fallhöhe
 ball.v = vector(0,0,0) #Anfangsgeschwindigkeit
-g=9.81
+g=119.81
 dt = 0.01
 while True:
     rate(100)
