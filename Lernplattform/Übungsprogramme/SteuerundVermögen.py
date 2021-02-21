@@ -1,3 +1,6 @@
+import locale
+locale.setlocale( locale.LC_ALL, '' )
+
 print()
 print("*-------------------------------*")
 print("* Steueramt Flächenlandrepublik *")
@@ -53,21 +56,17 @@ while vermögen <= 0.0:
 #-------------------------------------------------------------------------------------------------------------------
 steuerlast = round(vermögenssteuer) + round(einkommensteuer)
 
-def ausgabe(nachname, vorname, einkommen, einkommensteuer, vermögen, vermögenssteuer):
-    print("######################")
-    print("Steuerberechnung für")
-    print(vorname, ",", nachname)
-    print("######################")
-    print("Zugrunde liegen die Werte des Einkommens in Höhe von", einkommen)
-    print("######################")
-    print("Zugrunde liegen die Werte des Vermögens in Höhe von", vermögen)
-    print("######################")
-    print(round(einkommensteuer))
-    print("######################")
-    print(round(vermögenssteuer))
-    print("######################")
-    print(einkommensteuer+vermögenssteuer)
-    print("######################")
-
-new_var = ausgabe(nachname, vorname, einkommen, einkommensteuer, vermögen, vermögenssteuer)
-              
+print("######################")
+print("Steuerberechnung für")
+print(vorname, ",", nachname)
+print("######################")
+print("Zugrunde liegen die Werte des Einkommens in Höhe von", einkommen)
+print("######################")
+print("Zugrunde liegen die Werte des Vermögens in Höhe von", vermögen)
+print("######################")
+print(locale.currency(round(einkommensteuer, grouping=True)))
+print("######################")
+print(round(vermögenssteuer))
+print("######################")
+print(einkommensteuer+vermögenssteuer)
+print("######################")

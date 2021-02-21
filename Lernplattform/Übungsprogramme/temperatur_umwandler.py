@@ -52,5 +52,3 @@ elif wahl == "6":
         print("Fehler: unmögliche Temperatur!")        
 else:
     print("Falsche Eingabe!") 
-
-   
